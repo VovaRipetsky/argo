@@ -87,5 +87,5 @@ jobs:
         curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
         chmod 700 get_helm.sh
         ./get_helm.sh
-        helm upgrade --install backend application-ing/ --set container.image=$ECR_REGISTRY/$ECR_REPOSITORY:latest 
+        helm upgrade --install backend application-ing/ --set container.image=676833452478.dkr.ecr.us-east-2.amazonaws.com/codedeploy:latest
         
