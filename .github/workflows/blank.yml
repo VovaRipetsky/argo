@@ -81,11 +81,12 @@ jobs:
     - name: Deploy k8s yaml
       id: deploy-k8s-yaml
       env:
-        
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        ECR_REPOSITORY: ${{ env.ECR_REPOSITORY }}
         IMAGE_NAME: ${{ steps.build-image.outputs.image }}
       run: |
         curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
         chmod 700 get_helm.sh
         ./get_helm.sh
-        helm upgrade --install backend application-ing/ --set container.image=676833452478.dkr.ecr.us-east-2.amazonaws.com/codedeploy:latest
+        helm upgrade --install backend application-ing/ --set container.image=$ECR_REGISTRY/$ECR_REPOSITORY:latest
         
