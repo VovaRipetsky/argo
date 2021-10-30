@@ -1,0 +1,7 @@
+# Default Values for my Helm Chart
+
+container:
+  image: 676833452478.dkr.ecr.us-east-2.amazonaws.com/myapp:java_v_49 #working
+ # image: 676833452478.dkr.ecr.us-east-2.amazonaws.com/myapp:java_v_31  #error
+
+replicaCount: 2
