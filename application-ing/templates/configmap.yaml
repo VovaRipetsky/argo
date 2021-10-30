@@ -5,4 +5,4 @@ metadata:
   name: config
 data:
   SomeKey: "SomeValue"
-  SomeSecondKey: SecondValue
+  SomeSecondKey: SecondValueTEEEST
