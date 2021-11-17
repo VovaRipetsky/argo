@@ -3273,8 +3273,8 @@ spec:
           name: tmp
         - mountPath: /helm-working-dir
           name: helm-working-dir
-        - mountPath: /home/argocd/.aws
-          name: argocd-aws-credentials
+      # - mountPath: /home/argocd/.aws
+      #    name: argocd-aws-credentials
       volumes:
       - configMap:
           name: argocd-ssh-known-hosts-cm
