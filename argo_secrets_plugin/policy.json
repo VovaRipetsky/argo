@@ -1,0 +1,33 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "kms:GetParametersForImport",
+                "kms:GetPublicKey",
+                "kms:Decrypt",
+                "kms:ListKeyPolicies",
+                "kms:ListRetirableGrants",
+                "kms:Encrypt",
+                "kms:GetKeyRotationStatus",
+                "kms:GetKeyPolicy",
+                "kms:DescribeKey",
+                "kms:ListResourceTags",
+                "kms:ListGrants"
+            ],
+            "Resource": "arn:aws:kms:us-east-2:676833452478:key/de4a5f1e-77d2-4f7c-81da-9a06dc1cf4bc"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "kms:DescribeCustomKeyStores",
+                "kms:ListKeys",
+                "kms:ListAliases"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
