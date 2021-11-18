@@ -4,6 +4,7 @@ metadata:
   name: {{ .Release.Name }}-petclinic
 spec:
   replicas: {{ .Values.replicaCount }}
+  revisionHistoryLimit: 5 
   selector:
     matchLabels:
       app: petclinic
