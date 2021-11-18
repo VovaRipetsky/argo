@@ -5,7 +5,7 @@ metadata:
   labels:
     env: prod
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: petclinic   # Selecting PODS with those Labels
   ports:
