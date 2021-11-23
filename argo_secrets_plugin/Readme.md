@@ -11,6 +11,13 @@ kubectl apply -f argocd.yaml
 tips:
 - need have permissions for cluster
 - need have permissions for aws kms key
+- permission to default svc account : 
+vault write auth/kubernetes/role/internal-app \
+>     bound_service_account_names=default \
+>     bound_service_account_namespaces=default \
+>     policies=app \
+>     ttl=24h
+
 -----------------------------------------
 
 For RBAC
