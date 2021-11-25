@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .Release.Name }}-service
+  name: {{ .Chart.Name }}-service
   labels:
     env: prod
 spec:
   type: LoadBalancer
   selector:
-    app: petclinic   # Selecting PODS with those Labels
+    app: {{ .Chart.Name }}   # Selecting PODS with those Labels
   ports:
     - protocol: TCP
       port: 80
