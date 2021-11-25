@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}-petclinic
+  name: {{ .Chart.Name }}-petclinic
 spec:
   replicas: {{ .Values.replicaCount }}
   revisionHistoryLimit: 5 
   selector:
     matchLabels:
-      app: petclinic
+      app: {{ .Chart.Name }}
   template:
     metadata:
       labels:
-        app: petclinic   # Service will look for those PODS Labels!!!
+        app: {{ .Chart.Name }}   # Service will look for those PODS Labels!!!
     spec:
       containers:
         - name: petclinic
