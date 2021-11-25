@@ -5,3 +5,5 @@ container:
  # image: 676833452478.dkr.ecr.us-east-2.amazonaws.com/myapp:java_v_31  #error
 
 replicaCount: 2
+username: Vova
+password: Vvvvv
