@@ -17,7 +17,7 @@ spec:
         - name: petclinic
           image: {{ .Values.container.image }}
           ports:
-          - containerPort: 8080
+          - containerPort: 80
             protocol: TCP
           envFrom:
             - configMapRef:
