@@ -7,13 +7,11 @@ env:
   AWS_REGION: us-east-2                   # set this to your preferred AWS region, e.g. us-west-1
 
 jobs:
-  alarm:
+  alarmjob:
     name: alarm
     runs-on: ubuntu-latest
-#    runs-on: self-hosted     
- 
-
-  
+#    runs-on: self-hosted   \
+    steps:
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
