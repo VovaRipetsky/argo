@@ -25,10 +25,11 @@ jobs:
       
     - name: Sleep     
       run: |
-          aws cloudwatch describe-alarm-history --alarm-name "TargetTracking-table/final-ProvisionedCapacityHigh-b86e277a-05b4-4921-801e-fcd3f2eea07b" --history-item-type StateUpdate
+          aws cloudwatch describe-alarms --alarm-names "TargetTracking-table/final-ProvisionedCapacityHigh-b86e277a-05b4-4921-801e-fcd3f2eea07b"
+
           sleep 60
-          aws cloudwatch describe-alarm-history --alarm-name "TargetTracking-table/final-ProvisionedCapacityHigh-b86e277a-05b4-4921-801e-fcd3f2eea07b" --history-item-type StateUpdate
-    
+          aws cloudwatch describe-alarms --alarm-names "TargetTracking-table/final-ProvisionedCapacityHigh-b86e277a-05b4-4921-801e-fcd3f2eea07b"
+
     - name: Enable     
       run: |
          aws cloudwatch enable-alarm-actions --alarm-names TargetTracking-table/final-ProvisionedCapacityHigh-b86e277a-05b4-4921-801e-fcd3f2eea07b
