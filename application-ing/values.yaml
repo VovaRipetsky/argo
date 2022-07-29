@@ -1,7 +1,8 @@
 # Default Values for my Helm Chart
 
 container:
-  image: nginx:latest #working
+ # image: nginx:latest #working
+  image: 440090727000.dkr.ecr.us-east-2.amazonaws.com/pipeline:latest
  # image: 676833452478.dkr.ecr.us-east-2.amazonaws.com/myapp:java_v_31  #error
 
 replicaCount: 2
